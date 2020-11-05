@@ -19,7 +19,7 @@ class qsbk:
         """获取网页内容"""
         try:
             url = ('https://www.qiushibaike.com/text/page/{}/'.format(page))
-            headers = {'User-Agent': user_agent}
+            headers = {'User-Agent': self.user_agent}
             request = urllib.request.Request(url, headers=headers)
             response = urllib.request.urlopen(request)
             soup = response.read().decode('utf-8')
