@@ -20,7 +20,7 @@ class qsbk:
         try:
             url = ('https://www.qiushibaike.com/text/page/{}/'.format(page))
             headers = {'User-Agent': user_agent}
-            request = urllib.request.Request(url, headers=self.headers)
+            request = urllib.request.Request(url, headers=headers)
             response = urllib.request.urlopen(request)
             soup = response.read().decode('utf-8')
             return soup
